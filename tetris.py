@@ -102,6 +102,7 @@ class Tetris():
         keytype = [('0' + str(x))for x in range(7)]
 
         if key in keytype:
+            print()    
             self.idxBlockType = int(key)
             self.top = 0
             self.left = Tetris.iScreenDw + self.iScreenDx//2 - 2
@@ -125,6 +126,8 @@ class Tetris():
                     break
                 else:
                     self.top += 1
+        elif key in keytype:
+            pass
         else:
             print("Wrong key!")
 
